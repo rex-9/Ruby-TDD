@@ -24,4 +24,19 @@ describe Solver do
       expect(Solver.new.reverse('hello')).to eq 'olleh'
     end
   end
+
+  context 'Testing Fizz Buzz method' do
+    it '15 is divisible by 3 and 5' do
+      expect(Solver.new.fizz_buzz(15)).to eql('fizz_buzz')
+    end
+    it '3 is divisible by 3' do
+      expect(Solver.new.fizz_buzz(3)).to eql('fizz')
+    end
+    it '5 is divisible by 5' do
+      expect(Solver.new.fizz_buzz(5)).to eql('buzz')
+    end
+    it '7 is not divisible by by 3 or 5' do
+      expect(Solver.new.fizz_buzz(7)).to eql('7')
+    end
+  end
 end
